@@ -30,4 +30,5 @@ Route::group([
     Route::get('register', function () { return redirUrl();  } )->name('backpack.auth.register');
     Route::post('register', function () { return redirUrl();  } );
 
+    Route::crud('grupo', 'GrupoCrudController');
 }); // this should be the absolute last line of this file
