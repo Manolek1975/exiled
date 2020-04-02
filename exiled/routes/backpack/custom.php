@@ -31,4 +31,5 @@ Route::group([
     Route::post('register', function () { return redirUrl();  } );
 
     Route::crud('grupo', 'GrupoCrudController');
+    Route::crud('categoria', 'CategoriaCrudController');
 }); // this should be the absolute last line of this file
