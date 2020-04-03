@@ -1,0 +1,82 @@
+body, header{
+    background-image: url("/images/fondo.png")!important;
+    font-size: 18px;
+}
+
+section {
+    padding: 10px;
+}
+
+p {
+    font-size: 18px;
+}
+
+hr {
+    border: 1px solid red;
+    margin: -20px 0 10px 0;
+}
+
+/* header {
+    background-image: url("/images/fondo.png")!important;
+    font-size: 18px;
+} */
+
+footer {
+    background-color: sienna;
+    padding: 0px;
+}
+
+.info-content {
+    margin-bottom: 100px!important;
+}
+
+.img_info {
+    padding-top: 40px;
+}
+
+/* .slider-int {
+    margin-bottom: 50px;
+} */
+
+.mision{
+    list-style-type: square;
+    color: red;
+    font-size: 20px;
+    padding: 40px 0 40px 0;
+}
+
+.inicio {
+    max-width: 800px;
+    padding: 40px;
+}
+
+ul#menu li {
+    display:inline;
+    padding: 20px 20px 20px 20px;
+}
+
+.space {
+    padding: 40px;
+}
+
+.powered {
+    position:relative;
+left: 200px
+
+}
+
+h2 {
+    margin-left: -100px;
+    margin-top: -100px
+}
+
+.slide {
+    margin-bottom: 50px;
+}
+
+.portada {
+    padding: 50px;
+}
+
+
+
