@@ -5,7 +5,7 @@ namespace App\Models;
 use Backpack\CRUD\app\Models\Traits\CrudTrait;
 use Illuminate\Database\Eloquent\Model;
 
-class Categoria extends Model
+class Quest extends Model
 {
     use CrudTrait;
 
@@ -15,11 +15,12 @@ class Categoria extends Model
     |--------------------------------------------------------------------------
     */
 
-    protected $table = 'categorias';
+    protected $table = 'quests';
     // protected $primaryKey = 'id';
     // public $timestamps = false;
     protected $guarded = ['id'];
-    protected $fillable = ['grupo_id', 'nombre', 'descripcion', 'imagen', 'slug'];
+    protected $fillable = ['categoria_id', 'nombre', 'descripcion', 'imagen', 'inicio', 'progreso', 'guia', 
+                            'objeto', 'xp', 'money', 'text', 'title', 'slug'];
     // protected $hidden = [];
     // protected $dates = [];
 
@@ -42,8 +43,8 @@ class Categoria extends Model
     | RELATIONS
     |--------------------------------------------------------------------------
     */
-    public function grupo(){
-        return $this->belongsTo('App\Models\Grupo');        
+    public function categoria(){
+        return $this->belongsTo('App\Models\Categoria');        
     }
     /*
     |--------------------------------------------------------------------------
@@ -62,6 +63,14 @@ class Categoria extends Model
     | MUTATORS
     |--------------------------------------------------------------------------
     */
+    public function setTitleAttribute($value){
+        // Rellena el title del nombre si está vacío
+        if(!isset($value))
+            $this->attributes['title'] = $this->nombre;
+        else
+            $this->attributes['title'] = $value;
+    }
+
     public function setSlugAttribute($value){
         // Rellena el slug del nombre si está vacío
         if(!isset($value))
@@ -112,6 +121,5 @@ class Categoria extends Model
                     }
         }
         
-    }     
-}    
-
+    }   
+}

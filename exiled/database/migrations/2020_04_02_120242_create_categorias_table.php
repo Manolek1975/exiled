@@ -18,7 +18,7 @@ class CreateCategoriasTable extends Migration
             $table->integer('grupo_id');
             $table->string('nombre', 255)->unique();
             $table->text('descripcion');
-            $table->string('foto');
+            $table->string('imagen');
             $table->string('slug', 255)->unique();
             $table->timestamps();
         });

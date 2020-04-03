@@ -85,10 +85,10 @@ class CategoriaCrudController extends CrudController
             'label' => 'Descripción',
             'type' => 'ckeditor',
         ]); 
-        // Foto
+        // Imagen
         $this->crud->addField([
-            'name' => 'foto',
-            'label' => 'Foto',
+            'name' => 'imagen',
+            'label' => 'imagen',
             'type' => 'image',
             'upload' => false,
             'prefix' => 'uploads/',

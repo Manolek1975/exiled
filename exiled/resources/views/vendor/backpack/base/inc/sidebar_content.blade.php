@@ -2,3 +2,4 @@
 <li class="nav-item"><a class="nav-link" href="{{ backpack_url('dashboard') }}"><i class="fa fa-dashboard nav-icon"></i> {{ trans('backpack::base.dashboard') }}</a></li>
 <li class='nav-item'><a class='nav-link' href="{{ backpack_url('grupo') }}"><i class='nav-icon fa fa-object-group'></i> Grupos</a></li>
 <li class='nav-item'><a class='nav-link' href="{{ backpack_url('categoria') }}"><i class='nav-icon fa fa-th-large'></i> Categorias</a></li>
+<li class='nav-item'><a class='nav-link' href='{{ backpack_url('quest') }}'><i class='nav-icon fa fa-question'></i> Quests</a></li>
