@@ -1,4 +1,3 @@
-
 <div class="container space">
     <div class="row">
         <!-- FOOTER LOGO -->
@@ -10,11 +9,10 @@
         <!-- # MENU FOOTER-->	
         <div>
             <ul id="menu" class="list">
-               <li><a href="/quienes-somos.html">Principales</a></li>
-               <li><a href="/aguja.html">Secundarias</a></li>
-               <li><a href="/instalaciones.html">Gremio</a></li>
-               <li><a href="/internacional.html" rel="nofollow" target="_blank">Compañeros</a></li>
-               <li><a href="/contacto.php">Encuentros</a></li>  
+               <li><a href="/quienes-somos.html">Bestiario</a></li>
+               <li><a href="/aguja.html">NPC's</a></li>
+               <li><a href="/instalaciones.html">Curiosidades</a></li>
+               <li><a href="/contacto.php">Contacto</a></li>  
             </ul>
         </div>
         <!-- POWERED -->
@@ -33,3 +31,9 @@
 
 <!-- js custom -->
 <script src="js/custom.min.js"></script>
+
+<!-- gallery -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js"></script>
+<!-- <script src="//code.jquery.com/jquery-3.3.1.min.js"></script> -->
+

@@ -4,10 +4,6 @@
 
 @section('content')
 <body class="int fondo">
-
-	<!-- # HEADER -->
-	<header include="header.html" class="clearfix fondo"></header>
-    <!-- # END HEADER -->
     
     <!-- # SLIDER -->
 	<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -19,7 +15,7 @@
 		<div class="carousel-inner slider-carousel">
 		  
 		  <!-- # Slide1 -->
-		  <div class="carousel-item active" style="background-image: url(images/slider1.png);">
+		  <div class="carousel-item active" style="background-image: url(images/slider4.png);">
 			<div class="blackMask"></div>
 			<div class="captionSlider">
 				 <div class="container">
@@ -34,7 +30,7 @@
 		  </div>
 		  
 		  <!-- # Slide2 -->
-		  <div class="carousel-item" style="background-image: url(images/slider2.png);">
+		  <div class="carousel-item" style="background-image: url(images/slider1.png);">
 			<div class="captionSlider">
 				 <div class="container">
 					  <div class="row d-flex align-items-center">
@@ -76,7 +72,7 @@
 	  </div>
 	  <!-- # END SLIDER -->
 
-    <section class="">
+    <section>
 		<div class="container">
 		    <div class="row portada">
                 <div class="col-md-6 float-left">
@@ -88,12 +84,11 @@
                     </p>
                 </div>
 				<div class="col-md-6"><img src="/images/portada1.png"></div>
-				
 			</div>
 			<div class="row portada">
                 <div class="col-md-6 float-right">
                     <h3>Exiled Kingdoms</h3>
-                    <p>Exiled Kingdoms es un RPG de acción para un jugador que te permite recorrer libremente un mundo único.
+                    <p>Exiled Kingdoms es un RPG de acción  para un jugador, desarrollado por 4 Dimension Games, que te permite recorrer libremente un mundo único.
                     Es un juego isométrico, inspirado en algunos de los mejores juegos de rol de las últimas décadas; 
                     recupera el viejo espíritu de los clásicos de muchas maneras: un entorno desafiante, 
                     elecciones con consecuencias y un sistema de juego sólido,
@@ -107,7 +102,7 @@
                     <p>Explora el mundo: nadie te indicará los secretos mejor escondidos. Habla con cientos de personajes diferentes,
                     cada uno con diálogos únicos, y resuelve decenas de misiones. Personaliza tu personaje con docenas de habilidades y
                     cientos de elementos diferentes. Supera todo tipo de monstruos y antagonistas, eligiendo cuidadosamente las armas o poderes
-                    para cada encuentro. Y regrese al clásico rastreo de mazmorras, con trampas y puertas secretas,
+                    para cada encuentro. Y regresa al clásico rastreo de mazmorras, con trampas y puertas secretas,
                     con la muerte esperando al incauto aventurero detrás de cada esquina.
                     </p>
                 </div>
@@ -123,11 +118,6 @@
         </div>
         
     </section>
-    
-
-	<!-- # FOOTER -->
-	<footer include="footer.html" class="container-fluid clearfix"></footer>
-	<!-- # END FOOTER -->
 
 </body>
 @endsection

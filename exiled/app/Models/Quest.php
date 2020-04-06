@@ -24,6 +24,7 @@ class Quest extends Model
     // protected $hidden = [];
     // protected $dates = [];
 
+
     /*
     |--------------------------------------------------------------------------
     | FUNCTIONS

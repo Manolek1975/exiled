@@ -7,8 +7,8 @@
     <meta name="msapplication-config" content="browserconfig.xml" />
 
 	<!-- favicon -->
-    <link rel="apple-touch-icon" href="images/icon.png">
-    <link rel="icon" type="image/ico" href="images/icon.png"/>
+    <!-- <link rel="apple-touch-icon" href="/images/icon.png">
+    <link rel="icon" type="image/ico" href="/images/icon.png"/> -->
 
 	<!-- css -->
 	<link rel="stylesheet" href="/css/bootstrap.min.css">

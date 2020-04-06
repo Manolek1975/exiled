@@ -127,12 +127,27 @@ class QuestCrudController extends CrudController
             'label' => 'Inicio',
             'type' => 'ckeditor',
         ]);
+
         // Progreso
         $this->crud->addField([
             'name' => 'progreso',
             'label' => 'Progreso',
-            'type' => 'ckeditor',
+            'type' => 'table',
+            'entity_singular' => 'Paso', // used on the "Add X" button
+            'columns' => [
+                'num' => 'Paso',
+                'desc' => 'Descripción',
+            ],
+            //'max' => 5, // maximum rows allowed in the table
+            //'min' => 0, // minimum rows allowed in the table
         ]);
+
+        // // Progreso
+        // $this->crud->addField([
+        //     'name' => 'progreso',
+        //     'label' => 'Progreso',
+        //     'type' => 'ckeditor',
+        // ]);
         // Guia
         $this->crud->addField([
             'name' => 'guia',
