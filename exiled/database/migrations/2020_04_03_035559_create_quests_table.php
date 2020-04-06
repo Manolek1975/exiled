@@ -19,14 +19,18 @@ class CreateQuestsTable extends Migration
             $table->string('nombre', 255)->unique();
             $table->text('descripcion');
             $table->text('imagen');
-            $table->text('inicio');
-            $table->text('progreso');
+            //Walkthrough
+            $table->string('inicio');
+            $table->string('area');
+            $table->string('npc');
+            $table->json('progreso');
             $table->text('guia');
             //Recompensas
             $table->string('objeto')->nullable();
             $table->string('xp')->nullable();
             $table->string('money')->nullable();
             $table->string('texto')->nullable();
+            //SEO
             $table->string('title', 255)->unique();
             $table->string('slug', 255)->unique();            
             $table->timestamps();

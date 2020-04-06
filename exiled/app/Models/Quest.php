@@ -19,7 +19,7 @@ class Quest extends Model
     // protected $primaryKey = 'id';
     // public $timestamps = false;
     protected $guarded = ['id'];
-    protected $fillable = ['categoria_id', 'nombre', 'descripcion', 'imagen', 'inicio', 'progreso', 'guia', 
+    protected $fillable = ['categoria_id', 'nombre', 'descripcion', 'imagen', 'inicio', 'area', 'npc', 'progreso', 'guia', 
                             'objeto', 'xp', 'money', 'text', 'title', 'slug'];
     // protected $hidden = [];
     // protected $dates = [];

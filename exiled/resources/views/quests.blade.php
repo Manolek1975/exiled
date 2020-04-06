@@ -30,6 +30,8 @@
                     </div>
                     <div>
                         <p>Inicio</p><hr>
+                        <p>Area: <a href="#">{{ $quest->area }}</a></p>
+                        <p>NPC: <a href="#">{{ $quest->npc }}</a></p>
                         <p>{!! $quest->inicio !!}</p>
                         <img class="inicio" src="{{ asset('uploads/'.$quest->imagen) }}">
                     </div>

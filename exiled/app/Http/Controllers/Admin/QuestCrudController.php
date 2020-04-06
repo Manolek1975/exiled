@@ -85,11 +85,15 @@ class QuestCrudController extends CrudController
         // Categoria
         $this->crud->addField([
             'label' => "Categoria",
-            'type' => 'select',
+            'type' => 'select2',
             'name' => 'categoria_id', // the db column for the foreign key
             'entity' => 'categoria', // the method that defines the relationship in your Model
             'attribute' => 'nombre', // foreign key attribute that is shown to user
             'model' => "App\Models\Categoria", // foreign key model
+
+            'options'   => (function ($query) {
+                return $query->orderBy('grupo_id', 'ASC')->where('grupo_id', 1)->get();
+            }), 
         ]);
         // Nombre
         $this->crud->addField([
@@ -127,7 +131,20 @@ class QuestCrudController extends CrudController
             'label' => 'Inicio',
             'type' => 'ckeditor',
         ]);
-
+        // Area
+        $this->crud->addField([
+            'name' => 'area',
+            'label' => 'Area',
+            'type' => 'text',
+            'limit' => 255
+        ]);
+        // NPC
+        $this->crud->addField([
+            'name' => 'npc',
+            'label' => 'NPC',
+            'type' => 'text',
+            'limit' => 255
+        ]);        
         // Progreso
         $this->crud->addField([
             'name' => 'progreso',
