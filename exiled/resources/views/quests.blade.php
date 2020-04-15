@@ -55,9 +55,11 @@
                         <a href="#">{{ $quest->objeto }}</a>
                         <p>{{ $quest->xp }} XP</p>
                     </div>
-
+                    <span style="display:block; height: 80px;"></span>
                 </div>
+                
             </div>
+
         </div>
     </section>
 

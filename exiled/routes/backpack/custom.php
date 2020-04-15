@@ -33,4 +33,7 @@ Route::group([
     Route::crud('grupo', 'GrupoCrudController');
     Route::crud('categoria', 'CategoriaCrudController');
     Route::crud('quest', 'QuestCrudController');
+    Route::crud('area', 'AreaCrudController');
+    Route::crud('npc', 'NpcCrudController');
+    Route::crud('item', 'ItemCrudController');
 }); // this should be the absolute last line of this file

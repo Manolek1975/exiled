@@ -1,5 +1,5 @@
 @extends('layouts.app' ,
-    [ 'metatitle' => $metatitle ?? 'Misiones '.$slider]
+    [ 'metatitle' => $metatitle ?? 'Misiones '.$categoria->nombre]
 )
 
 @section('content')
@@ -10,11 +10,11 @@
 	<![endif]-->
 
 	<!-- # SLIDER INT -->
-	<section class="slider-int" style="background-image: url(/images/principales.png);background-attachment: inherit;">
+	<section class="slider-int" style="background-image: url({{ asset('uploads/'.$categoria->imagen) }}); background-attachment: inherit;">
 	    <div class="container">
             <div class="row">
                 <div class="col">
-                    <h1>Misiones {{ $slider }}</h1>
+                    <h1>Misiones {{ $categoria->nombre }}</h1>
                 </div>
             </div>
 	    </div>

@@ -33,8 +33,7 @@ Route::get('/categorias/{id}', function($id) {
     $categorias = Categoria::all();
     $quests = Quest::where('categoria_id', $id)->get();
     $categoria = Categoria::where('id', $id)->first();
-    $slider = $categoria->nombre;
-    return view('categorias', compact('grupos', 'categorias', 'quests', 'slider'));
+    return view('categorias', compact('grupos', 'categorias', 'quests', 'categoria'));
 });
 
 Route::get('/quests/{id}', function($id) {

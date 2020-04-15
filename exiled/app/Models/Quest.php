@@ -19,8 +19,8 @@ class Quest extends Model
     // protected $primaryKey = 'id';
     // public $timestamps = false;
     protected $guarded = ['id'];
-    protected $fillable = ['categoria_id', 'nombre', 'descripcion', 'imagen', 'inicio', 'area', 'npc', 'progreso', 'guia', 
-                            'objeto', 'xp', 'money', 'text', 'title', 'slug'];
+    protected $fillable = ['categoria_id', 'nombre', 'descripcion', 'imagen', 'inicio', 'area_id', 'npc_id', 'progreso', 'guia', 
+                            'item_id', 'xp', 'money', 'text', 'title', 'slug'];
     // protected $hidden = [];
     // protected $dates = [];
 
@@ -47,6 +47,14 @@ class Quest extends Model
     public function categoria(){
         return $this->belongsTo('App\Models\Categoria');        
     }
+
+    public function area(){
+        return $this->belongsTo('App\Models\Area');        
+    }
+    
+    public function npc(){
+        return $this->belongsTo('App\Models\Npc');
+    }    
     /*
     |--------------------------------------------------------------------------
     | SCOPES

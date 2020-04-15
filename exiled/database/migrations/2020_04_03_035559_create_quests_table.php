@@ -21,12 +21,12 @@ class CreateQuestsTable extends Migration
             $table->text('imagen');
             //Walkthrough
             $table->string('inicio');
-            $table->string('area');
-            $table->string('npc');
+            $table->integer('area_id');
+            $table->integer('npc_id');
             $table->json('progreso');
             $table->text('guia');
             //Recompensas
-            $table->string('objeto')->nullable();
+            $table->integer('item_id')->nullable();
             $table->string('xp')->nullable();
             $table->string('money')->nullable();
             $table->string('texto')->nullable();

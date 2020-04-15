@@ -15,7 +15,7 @@
 		<div class="carousel-inner slider-carousel">
 		  
 		  <!-- # Slide1 -->
-		  <div class="carousel-item active" style="background-image: url(images/slider4.png);">
+		  <div class="carousel-item active" style="background-image: url(images/slider1.png);">
 			<div class="blackMask"></div>
 			<div class="captionSlider">
 				 <div class="container">
@@ -30,7 +30,7 @@
 		  </div>
 		  
 		  <!-- # Slide2 -->
-		  <div class="carousel-item" style="background-image: url(images/slider1.png);">
+		  <div class="carousel-item" style="background-image: url(images/slider2.png);">
 			<div class="captionSlider">
 				 <div class="container">
 					  <div class="row d-flex align-items-center">
