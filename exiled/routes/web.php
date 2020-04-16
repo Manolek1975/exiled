@@ -44,3 +44,12 @@ Route::get('/quests/{id}', function($id) {
     $progreso = json_decode($quest->progreso, true);
     return view('quests', compact('grupos', 'categorias', 'quest', 'progreso'));
 });
+
+Route::get('/areas/{id}', function($id) {
+    $grupos = Grupo::all();
+    $categorias = Categoria::all();
+    $area = Area::find($id);
+    // Como el progreso es un array json, decodificamos para generar un array
+    //$progreso = json_decode($quest->progreso, true);
+    return view('quests', compact('grupos', 'categorias', 'area'));
+});

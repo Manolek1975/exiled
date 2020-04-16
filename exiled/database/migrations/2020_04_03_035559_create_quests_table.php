@@ -17,19 +17,21 @@ class CreateQuestsTable extends Migration
             $table->id();
             $table->integer('categoria_id');
             $table->string('nombre', 255)->unique();
-            $table->text('descripcion');
-            $table->text('imagen');
+            $table->string('imagequest');
+            $table->text('images');
             //Walkthrough
             $table->string('inicio');
             $table->integer('area_id');
             $table->integer('npc_id');
             $table->json('progreso');
-            $table->text('guia');
+            $table->text('descripcion');
             //Recompensas
             $table->integer('item_id')->nullable();
-            $table->string('xp')->nullable();
-            $table->string('money')->nullable();
-            $table->string('texto')->nullable();
+            $table->integer('xp')->nullable();
+            $table->integer('oro')->nullable();
+            $table->json('reputacion')->nullable();
+            $table->string('notas')->nullable();
+            $table->string('quest_id')->nullable();
             //SEO
             $table->string('title', 255)->unique();
             $table->string('slug', 255)->unique();            

@@ -36,4 +36,8 @@ Route::group([
     Route::crud('area', 'AreaCrudController');
     Route::crud('npc', 'NpcCrudController');
     Route::crud('item', 'ItemCrudController');
+    // Dropzone
+    Route::post('/quest/{id}/upload_images','QuestCrudController@ajaxUploadImages');
+    Route::post('/quest/{id}/reorder_images','QuestCrudController@ajaxReorderImages');
+    Route::post('/quest/{id}/delete_image','QuestCrudController@ajaxDeleteImage');    
 }); // this should be the absolute last line of this file

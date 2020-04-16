@@ -29,8 +29,10 @@
 <script src="/js/vendor/popper.min.js"></script>
 <script src="/js/bootstrap.min.js"></script>
 
+
 <!-- js custom -->
 <script src="js/custom.min.js"></script>
+<script src="/js/slider.js"></script>
 
 <!-- gallery -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css" />

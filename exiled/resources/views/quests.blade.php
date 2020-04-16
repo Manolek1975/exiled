@@ -25,26 +25,50 @@
                 <!-- Quests -->
                 <div class="col-12">
                     <div class="mision">
-                        <ul style="padding-left: 20px;"><li>{{ $quest->nombre }}</li></ul>
-                        <p>{!! $quest->descripcion !!}</p>
+                        <img src="{{ asset('uploads/'.$quest->imagequest) }}">
                     </div>
                     <div>
                         <p>Inicio</p><hr>
-                        <p>Area: <a href="#">{{ $quest->area }}</a></p>
-                        <p>NPC: <a href="#">{{ $quest->npc }}</a></p>
                         <p>{!! $quest->inicio !!}</p>
-                        <img class="inicio" src="{{ asset('uploads/'.$quest->imagen) }}">
+                        <p>Area: <a href="{{ $quest->area->id }}">{{ $quest->area->nombre }}</a></p>
+                        <p>NPC: <a href="#">{{ $quest->npc->nombre }}</a></p>
+                        <div>
+                            @if($progreso)
+                                <p>Progreso</p><hr>
+                                @foreach($progreso as $val)
+                                    <span>{{ $val['num'] }}.-{{ $val['desc'] }}</span><br />
+                                    
+                                @endforeach
+                            @endif
+                            <span style="display:block; height: 40px;"></span>
+                        </div>
+
+                        <!-- <div class="slider">
+                            @foreach($quest->images as $image)
+                            <div class="slide" id="slide">
+                                <img src="{{ asset('/uploads/'.$image) }}" class="img-fluid" alt="Imagen principal">
+                            </div>
+                            @endforeach  
+                        </div> -->
+
+
+
+                        <!-- # SLIDER -->
+                        <div id="slider">
+                            <a href="#" class="control_next">></a>
+                            <a href="#" class="control_prev"><</a>
+                            <ul>
+                            @foreach($quest->images as $image)
+                                <li>
+                                    <img src="{{ asset('/uploads/'.$image) }}" class="img-fluid" alt="Imagen principal">
+                                </li>
+                            @endforeach  
+                            </ul>  
+                        </div>
+	                    <!-- # END SLIDER -->
                     </div>
-                    <div>
-                        @if($progreso)
-                            <p>Progreso</p><hr>
-                            @foreach($progreso as $val)
-                                <span>{{ $val['num'] }}.-{{ $val['desc'] }}</span><br />
-                                
-                            @endforeach
-                        @endif
-                        <span style="display:block; height: 40px;"></span>
-                    </div>
+
+
                     <div>
                         <p>Guía</p><hr>
                         <p>{!! $quest->guia !!}</p>
@@ -64,4 +88,5 @@
     </section>
 
 </body>
+
 @endsection

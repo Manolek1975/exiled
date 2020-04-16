@@ -28,7 +28,9 @@ class QuestRequest extends FormRequest
         return [
             'nombre' => 'required|min:5|max:255',
             'descripcion' => 'required',
-            'imagen' => 'required'
+            'imagequest' => 'required',
+            'images' => 'required',
+            'progreso' => 'required',
         ];
     }
 

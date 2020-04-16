@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Backpack\CRUD\app\Models\Traits\CrudTrait;
 use Illuminate\Database\Eloquent\Model;
+use Storage;
 
 class Quest extends Model
 {
@@ -19,8 +20,9 @@ class Quest extends Model
     // protected $primaryKey = 'id';
     // public $timestamps = false;
     protected $guarded = ['id'];
-    protected $fillable = ['categoria_id', 'nombre', 'descripcion', 'imagen', 'inicio', 'area_id', 'npc_id', 'progreso', 'guia', 
-                            'item_id', 'xp', 'money', 'text', 'title', 'slug'];
+    protected $fillable = ['categoria_id', 'imagequest', 'images', 'nombre', 'inicio', 'area_id', 'npc_id', 'progreso', 'descripcion', 
+                            'item_id', 'xp', 'oro', 'reputacion', 'notas', 'quest_id', 'title', 'slug'];
+    protected $casts = ['images' => 'array'];
     // protected $hidden = [];
     // protected $dates = [];
 
@@ -30,15 +32,46 @@ class Quest extends Model
     | FUNCTIONS
     |--------------------------------------------------------------------------
     */
-    public static function boot()
-    {
+    // Borrado de imágenes en cascada
+	public static function boot(){
         parent::boot();
-        // Borrado de las imagenes en el borrado del registro
         static::deleting(function($obj) {
-            \Storage::disk('uploads')->delete($obj->imagen);
+            if (count((array)$obj->imagequest)) {
+                \Storage::disk('uploads')->delete($obj->imagequest);
+            }
+            if (count((array)$obj->images)) {
+                foreach ($obj->images as $file_path) {
+                    \Storage::disk('uploads')->delete($file_path);
+                }
+            }
         });
-        // (OG) TODO : delete images on update
     }
+
+    public function updateImageOrder($order) {
+		$new_images_attribute = [];
+
+		foreach ($order as $key => $image) {
+		    $new_images_attribute[$image['id']] = $image['path'];
+		}
+		$new_images_attribute = json_encode($new_images_attribute);
+
+		$this->attributes['images'] = $new_images_attribute;
+		$this->save();
+    }
+    
+	public function removeImage($image_id, $image_path, $disk)
+	{
+		// delete the image from the db
+		$images = json_encode(array_except($this->images, [$image_id]));
+		$this->attributes['images'] = $images;
+		$this->save();
+
+		// delete the image from the folder
+		if (Storage::disk($disk)->has($image_path)) {
+		    Storage::disk($disk)->delete($image_path);
+		}
+	}    
+	    
     /*
     |--------------------------------------------------------------------------
     | RELATIONS
@@ -54,7 +87,15 @@ class Quest extends Model
     
     public function npc(){
         return $this->belongsTo('App\Models\Npc');
-    }    
+    }
+    
+    public function item(){
+        return $this->belongsTo('App\Models\Item');
+    } 
+    
+    public function quest(){
+        return $this->belongsTo('App\Models\Quest');
+    }     
     /*
     |--------------------------------------------------------------------------
     | SCOPES
@@ -88,9 +129,9 @@ class Quest extends Model
             $this->attributes['slug'] = $value;
     }
     
-    public function setImagenAttribute($value) //el nombre debe ser igual al del campo
+    public function setImagequestAttribute($value) //el nombre debe ser igual al del campo
     {
-        $attribute_name = "imagen";
+        $attribute_name = "imagequest";
         $disk = "uploads";
         $destination_path = "";
         
@@ -130,5 +171,14 @@ class Quest extends Model
                     }
         }
         
-    }   
+    }
+    // Mutator para subir multiples imágenes
+    public function setImagesAttribute($value)
+    {
+        $attribute_name = "images";
+        $disk = "uploads";
+        $destination_path = "/";
+
+        $this->uploadMultipleFilesToDisk($value, $attribute_name, $disk, $destination_path);
+    }    
 }
