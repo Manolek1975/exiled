@@ -35,16 +35,15 @@ class CategoriaCrudController extends CrudController
             'name' => 'grupo.nombre',
             'label' => 'Grupo',
         ]);
-        // Foto
+        // Imagen
         $this->crud->addColumn([
-            'name' => 'foto',
-            'label' => 'Foto',
+            'name' => 'imagen',
+            'label' => 'Imagen',
             'type' => 'image',
             'prefix' => 'uploads',
             //'height' => '50px',
             //'width' => '50px',
-        ]);          
-
+        ]);      
         // Nombre
         $this->crud->addColumn([
             'name' => 'nombre',

@@ -1,5 +1,5 @@
 @extends('layouts.app' ,
-    [ 'metatitle' => $metatitle ?? 'Misiones '.$categoria->nombre]
+    [ 'metatitle' => $metatitle ?? 'Areas']
 )
 
 @section('content')
@@ -14,7 +14,7 @@
 	    <div class="container">
             <div class="row">
                 <div class="col">
-                    <h1>{{ $categoria->nombre }}</h1>
+                    <h1>Areas</h1>
                 </div>
             </div>
 	    </div>
@@ -29,7 +29,7 @@
                 <div class="col-12">
                     @foreach($areas as $area)
                     <div class="mision">
-                        <a href="/quests/{{ $quest->id }}" class="mision">
+                        <a href="/area/{{ $area->id }}" class="mision">
                             <ul><li>{{ $area->nombre }}</li></ul>
                         </a>
                     </div>

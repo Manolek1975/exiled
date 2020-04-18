@@ -18,15 +18,9 @@ hr {
 
 h3 {
     list-style-type: square;
-    color: red;
+    color: #682116;
     font-size: 20px;
-    padding: 40px 0 40px 0;
 }
-
-/* header {
-    background-image: url("/images/fondo.png")!important;
-    font-size: 18px;
-} */
 
 footer {
     background-color: sienna;
@@ -34,22 +28,29 @@ footer {
 }
 
 .info-content {
-    margin-bottom: 100px!important;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
-.img_info {
-    padding-top: 40px;
+.text-index {
+    vertical-align: text-top;
+    margin-bottom: 100px;
 }
 
 /* .slider-int {
     margin-bottom: 50px;
 } */
 
-.mision{
-    list-style-type: square;
-    color: red;
-    font-size: 20px;
-    padding: 40px 0 40px 0;
+.mision img{
+  margin-top: 50px;
+  margin-bottom: 50px;
+  /* padding: 40px 0 40px 0; */
+  border: 2px solid #682116;
+  
+
 }
 
 .inicio {
@@ -72,12 +73,12 @@ left: 200px
 
 }
 
-
-
+/* SLIDER */
 #slider {
   position: relative;
   overflow: hidden;
   margin: 20px auto 0 auto;
+  margin-bottom: 50px;
   border-radius: 4px;
 }
 
@@ -104,16 +105,16 @@ left: 200px
 
 a.control_prev, a.control_next {
   position: absolute;
-  top: 35%;
+  top: 75%;
   z-index: 999;
   display: block;
-  padding: 4% 3%;
+  padding: 4% 1%;
   width: auto;
   height: auto;
   color: #fff;
   text-decoration: none;
   font-weight: 600;
-  font-size: 36px;
+  font-size: 48px;
   opacity: 0.8;
   cursor: pointer;
 }
@@ -129,21 +130,50 @@ a.control_prev {
 a.control_next {
   right: 0;
   border-radius: 2px 0 0 2px;
-} 
+}
+
+.map {
+  display:inline-block;
+  width:auto;
+  height:auto;
+  text-align:center;
+  padding:0px 4px;
+  vertical-align:middle;
+  -moz-border-radius:3px;
+  -webkit-border-radius:3px;
+  border-radius:3px;
+  background-color:lime;
+}
+
+.map-title {
+  color:black;
+  font-size:88%;
+  font-weight:bold"
+}
+
+.leyenda {
+  display:inline-block;
+  width:auto;
+  height:auto;
+  text-align:center;
+  vertical-align:middle;
+  -moz-border-radius:3px;
+  -webkit-border-radius:3px;
+  border-radius:10px;
+
+}
+
+.leyenda-num {
+  color:black;
+  background-color:lime;
+  font-size:85%;
+  font-weight:bold;
+  padding: 0 4px 4px 4px;
+
+  margin-left: 270px;
+  border-radius:5px;
+}
 
 
-/* .slider {
-    width: 960px;
-    height: 480px;
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;  
-  }
-  .slide {
-    width: 960px;
-    flex-shrink: 0;
-    height: 100%;
-    scroll-snap-align: start;
-  } */
 
 

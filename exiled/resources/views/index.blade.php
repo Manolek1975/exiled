@@ -73,9 +73,21 @@
 	  <!-- # END SLIDER -->
 
     <section>
-		<div class="container">
-		    <div class="row portada">
-                <div class="col-md-6 float-left">
+		<div class="container info-content">
+			<div class="row">
+                <div class="col-md-6 text-index">
+                    <h3>Exiled Kingdoms</h3>
+                    <p>Exiled Kingdoms es un RPG de acción  para un jugador, desarrollado por 4 Dimension Games, que te permite recorrer libremente un mundo único.
+                    Es un juego isométrico, inspirado en algunos de los mejores juegos de rol de las últimas décadas; 
+                    recupera el viejo espíritu de los clásicos de muchas maneras: un entorno desafiante, 
+                    elecciones con consecuencias y un sistema de juego sólido,
+                    con diferentes caminos para desarrollar tu personaje.
+                    </p>
+                </div>
+				<div class="col-md-6"><img src="/images/portada2.png"></div>
+			</div>			
+		    <div class="row">
+                <div class="col-md-6 text-index">
                     <h3>Exiled Quests</h3>
                     <p>Exiled Quest es una guia en castellano con todas las quests del juego de Exiled Kingdoms, puede servir de ayuda si te quedas atascado en 
                     una misión en particular o como referencia para ver que misiones estan disponibles. Aunque gran parte ha sido traducida de 
@@ -85,20 +97,10 @@
                 </div>
 				<div class="col-md-6"><img src="/images/portada1.png"></div>
 			</div>
-			<div class="row portada">
-                <div class="col-md-6 float-right">
-                    <h3>Exiled Kingdoms</h3>
-                    <p>Exiled Kingdoms es un RPG de acción  para un jugador, desarrollado por 4 Dimension Games, que te permite recorrer libremente un mundo único.
-                    Es un juego isométrico, inspirado en algunos de los mejores juegos de rol de las últimas décadas; 
-                    recupera el viejo espíritu de los clásicos de muchas maneras: un entorno desafiante, 
-                    elecciones con consecuencias y un sistema de juego sólido,
-                    con diferentes caminos para desarrollar tu personaje.
-                    </p>
-                </div>
-				<div class="col-md-6 "><img src="/images/portada2.png"></div>
-			</div>
-			<div class="row portada">
-                <div class="col-md-6 info-content float-right">
+
+			<div class="row">
+                <div class="col-md-6 text-index">
+					<h3>RPG CLÁSICO</h3>
                     <p>Explora el mundo: nadie te indicará los secretos mejor escondidos. Habla con cientos de personajes diferentes,
                     cada uno con diálogos únicos, y resuelve decenas de misiones. Personaliza tu personaje con docenas de habilidades y
                     cientos de elementos diferentes. Supera todo tipo de monstruos y antagonistas, eligiendo cuidadosamente las armas o poderes
@@ -106,16 +108,10 @@
                     con la muerte esperando al incauto aventurero detrás de cada esquina.
                     </p>
                 </div>
-				<div class="col-md-6 img_info"><img src="/images/portada3.png" style="margin-top: -50px"></div>
+				<div class="col-md-6"><img src="/images/portada3.png"></div>
 			</div>	
-			<div class="row portada">
-                <div class="col-md-6 info-content float-left">
-                    <h3>Actualizaciones</h3>
-                    <span style="font-style: italic;">30/03/2020</span>
-                    <a class="lead" href="/quest1.html">Una carta misteriosa</a>
-                </div>  
-            </div>
-        </div>
+
+		</div>
         
     </section>
 

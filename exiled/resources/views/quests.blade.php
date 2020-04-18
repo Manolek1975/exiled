@@ -43,16 +43,6 @@
                             <span style="display:block; height: 40px;"></span>
                         </div>
 
-                        <!-- <div class="slider">
-                            @foreach($quest->images as $image)
-                            <div class="slide" id="slide">
-                                <img src="{{ asset('/uploads/'.$image) }}" class="img-fluid" alt="Imagen principal">
-                            </div>
-                            @endforeach  
-                        </div> -->
-
-
-
                         <!-- # SLIDER -->
                         <div id="slider">
                             <a href="#" class="control_next">></a>
@@ -68,16 +58,15 @@
 	                    <!-- # END SLIDER -->
                     </div>
 
-
                     <div>
                         <p>Guía</p><hr>
-                        <p>{!! $quest->guia !!}</p>
-                        <img class="inicio" src="/images/Adaon.jpg">
+                        <p>{!! $quest->descripcion !!}</p>
                     </div>
                     <div>
                         <p>Recompensa</p><hr>
-                        <a href="#">{{ $quest->objeto }}</a>
+                        <a href="#">{{ $quest->item->nombre }}</a>
                         <p>{{ $quest->xp }} XP</p>
+                        <p>{{ $quest->oro }}</p>
                     </div>
                     <span style="display:block; height: 80px;"></span>
                 </div>

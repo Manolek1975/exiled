@@ -32,7 +32,7 @@ class AreaCrudController extends CrudController
         //$this->crud->setFromDb();
         // Categoria
         $this->crud->addColumn([
-            'name' => 'categoria.nombre',
+            'name' => 'categoria',
             'label' => 'Categoria',
         ]);
         // Imagen
@@ -64,16 +64,12 @@ class AreaCrudController extends CrudController
         //$this->crud->setFromDb();
         // Categoria
         $this->crud->addField([
+            'name' => 'categoria',
             'label' => "Categoria",
-            'type' => 'select2',
-            'name' => 'categoria_id', // the db column for the foreign key
-            'entity' => 'categoria', // the method that defines the relationship in your Model
-            'attribute' => 'nombre', // foreign key attribute that is shown to user
-            'model' => "App\Models\Categoria", // foreign key model
-
-            'options'   => (function ($query) {
-                return $query->orderBy('grupo_id', 'ASC')->where('grupo_id', 2)->get();
-            }), 
+            'type' => 'select_from_array',
+            'options' => ['Reino' => 'Reino', 'Zona' => 'Zona', 'Ciudad' => 'Ciudad', 'Edificio' => 'Edificio', 'Dungeon' => 'Dungeon' ],
+            'allows_null' => false,
+            'default' => 'one',
         ]);
         // Nombre
         $this->crud->addField([
@@ -103,10 +99,12 @@ class AreaCrudController extends CrudController
             'name' => 'leyenda',
             'label' => 'Leyenda',
             'type' => 'table',
-            'entity_singular' => 'eyenda', // used on the "Add X" button
+            'entity_singular' => 'Leyenda', // used on the "Add X" button
             'columns' => [
-                'num' => 'Leyenda',
-                'desc' => 'Descripción',
+                'num' => 'Número',
+                'name' => 'Nombre',
+                'left' => 'Left',
+                'top' => 'Top',
             ],
             //'max' => 5, // maximum rows allowed in the table
             //'min' => 0, // minimum rows allowed in the table
@@ -114,20 +112,22 @@ class AreaCrudController extends CrudController
         // NPCs
         $this->crud->addField([
             'label' => "NPCs",
-            'type' => 'select2',
-            'name' => 'npcs_id', // the db column for the foreign key
+            'type' => 'select2_multiple',
+            'name' => 'npc', // the db column for the foreign key
             'entity' => 'npc', // the method that defines the relationship in your Model
             'attribute' => 'nombre', // foreign key attribute that is shown to user
             'model' => "App\Models\Npc", // foreign key model
+            'pivot' => true
         ]);
         // Quests
         $this->crud->addField([
             'label' => "Quests",
-            'type' => 'select2',
-            'name' => 'quest_id', // the db column for the foreign key
+            'type' => 'select2_multiple',
+            'name' => 'quest', // the db column for the foreign key
             'entity' => 'quest', // the method that defines the relationship in your Model
             'attribute' => 'nombre', // foreign key attribute that is shown to user
             'model' => "App\Models\Quest", // foreign key model
+            'pivot' => true
         ]);
         // Title
         $this->crud->addField([

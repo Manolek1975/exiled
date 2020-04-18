@@ -3,7 +3,7 @@ jQuery(document).ready(function ($) {
 
     setInterval(function () {
         moveRight();
-    }, 4000);
+    }, 5000);
 
   var slideCount = $('#slider ul li').length;
   var slideWidth = $('#slider ul li').width();
@@ -34,12 +34,14 @@ jQuery(document).ready(function ($) {
       });
   };
 
-  $('a.control_prev').click(function () {
-      moveLeft();
+  $('a.control_prev').click(function (e) {
+    e.preventDefault();
+    moveLeft();
   });
 
-  $('a.control_next').click(function () {
-      moveRight();
+  $('a.control_next').click(function (e) {
+    e.preventDefault();
+    moveRight();
   });
 
 });    

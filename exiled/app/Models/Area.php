@@ -19,8 +19,8 @@ class Area extends Model
     // protected $primaryKey = 'id';
     // public $timestamps = false;
     protected $guarded = ['id'];
-    protected $fillable = ['categoria_id', 'nombre', 'descripcion', 'imagen', 'leyenda', 'npcs_id', 'quests_id', 'title', 'slug'];
-    //protected $casts = ['npcs_id' => 'array', 'quests_id' => 'array'];
+    protected $fillable = ['categoria', 'nombre', 'descripcion', 'imagen', 'leyenda', 'npc_id', 'quest_id', 'title', 'slug'];
+    //protected $casts = ['npc_id' => 'array'];
     // protected $hidden = [];
     // protected $dates = [];
 
@@ -48,11 +48,11 @@ class Area extends Model
     }
 
     public function npc(){
-        return $this->belongsTo('App\Models\Npc');        
+        return $this->belongsToMany('App\Models\Npc');        
     }
 
     public function quest(){
-        return $this->belongsTo('App\Models\Quest');        
+        return $this->belongsToMany('App\Models\Quest');        
     }    
 
     /*
@@ -92,7 +92,7 @@ class Area extends Model
     {
         $attribute_name = "imagen";
         $disk = "uploads";
-        $destination_path = "";
+        $destination_path = "/areas";
         
         // if the image was erased
         if ($value==null) {

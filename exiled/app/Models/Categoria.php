@@ -74,7 +74,7 @@ class Categoria extends Model
     {
         $attribute_name = "imagen";
         $disk = "uploads";
-        $destination_path = "";
+        $destination_path = "/sliders";
         
         // if the image was erased
         if ($value==null) {

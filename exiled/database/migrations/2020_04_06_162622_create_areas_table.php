@@ -20,8 +20,8 @@ class CreateAreasTable extends Migration
             $table->text('descripcion');
             $table->string('imagen', 255);
             $table->text('leyenda');
-            $table->integer('npcs_id');
-            $table->integer('quests_id');
+            $table->integer('npc_id');
+            $table->integer('quest_id');
             //SEO
             $table->string('title', 255)->unique();
             $table->string('slug', 255)->unique();              
